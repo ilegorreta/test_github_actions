@@ -52,9 +52,7 @@ def upload_to_snowflake(conn, records, SNOWSQL_DEST_TABLE, SNOWSQL_DEST_SCHEMA):
     try:
         dest_table = get_timesheets_raw_table(SNOWSQL_DEST_TABLE, SNOWSQL_DEST_SCHEMA)
         result = conn.execute(dest_table.insert(), records)
-        print(
-            f"Uploaded {len(len(result.inserted_primary_key_rows))} records to Snowflake"
-        )
+        print(f"Uploaded {len(result.inserted_primary_key_rows)} records to Snowflake")
     except Exception as e:
         # print("Can't upload data into Snowflake")
         print(e)

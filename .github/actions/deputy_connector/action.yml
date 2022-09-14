@@ -5,3 +5,6 @@ description: "Fetch data from Deputy API and upload it into Snowflake instance"
 runs:
   using: "docker"
   image: "../../../Dockerfile"
+  env:
+    WORK_DIR: "deputy"
+    PYTHON_SCRIPT: "timesheets.py"
