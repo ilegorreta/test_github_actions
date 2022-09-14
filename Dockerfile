@@ -35,7 +35,7 @@ RUN groupadd -r appuser && \
 USER appuser
 
 # Copy the code files and shell script to run them
-COPY bot.sh /app
+COPY run.sh /app
 COPY deputy /app/deputy
 
 # Run the shell script when the container launches
