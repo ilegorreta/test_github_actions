@@ -14,3 +14,5 @@ jobs:
       run: echo "Running from GH!"
     - name: Deploy Deputy Container
       uses: ./.github/actions/deputy_connector
+      env:
+          TIMESHEETS_ENDPOINT: ${{ secrets.TIMESHEETS_ENDPOINT }}
