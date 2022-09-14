@@ -15,4 +15,12 @@ jobs:
     - name: Deploy Deputy Container
       uses: ./.github/actions/deputy_connector
       env:
+          DEPUTY_API_KEY: ${{ secrets.DEPUTY_API_KEY }}
           TIMESHEETS_ENDPOINT: ${{ secrets.TIMESHEETS_ENDPOINT }}
+          SNOWSQL_ACCOUNT: ${{ secrets.SNOWSQL_ACCOUNT }}
+          SNOWSQL_USER: ${{ secrets.SNOWSQL_USER }}
+          SNOWSQL_PWD: ${{ secrets.SNOWSQL_PWD }}
+          SNOWSQL_WAREHOUSE: ${{ secrets.SNOWSQL_WAREHOUSE }}
+          SNOWSQL_DEST_DB: ${{ secrets.SNOWSQL_DEST_DB }}
+          SNOWSQL_DEST_SCHEMA: ${{ secrets.SNOWSQL_DEST_SCHEMA }}
+          SNOWSQL_DEST_TABLE: ${{ secrets.SNOWSQL_DEST_TABLE }}
