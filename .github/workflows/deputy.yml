@@ -1,0 +1,15 @@
+name: deputy_connector
+on:
+  schedule:
+    - cron: '0 8 * * *'
+
+jobs:
+  deputy_snowflake_connector:
+    runs-on: ubuntu-latest
+    name: Deputy-Snowflake Connector
+    steps:
+    - uses: actions/checkout@v3
+    - name: Test_1
+      run: echo "Running from GH!"
+    - name: Deploy Deputy Container
+      uses: ./.github/actions/deputy_connector

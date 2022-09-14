@@ -1,0 +1,7 @@
+
+
+.env
+.spyproject/*
+utils/*
+*pycache*
+.secrets

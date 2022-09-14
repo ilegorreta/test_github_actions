@@ -1,0 +1,9 @@
+# Basic packages
+pandas>=1.0.0
+numpy>=1.17.0
+pytz>=2018.4
+snowflake-sqlalchemy==1.4.1
+
+# Connecting via jump servers
+paramiko
+requests
